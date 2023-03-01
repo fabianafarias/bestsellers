@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:longClickable="false"
+    android:background="@color/white"
+    android:elevation="20dp"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_book"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="20dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgBook"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:src="@drawable/img_book"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBookTitle"
+            style="@style/Book_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintLeft_toRightOf="@id/imgBook"
+            app:layout_constraintTop_toTopOf="@id/imgBook"
+            tools:text="@string/book_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBookAuthor"
+            style="@style/Book_Subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintLeft_toRightOf="@id/imgBook"
+            app:layout_constraintTop_toBottomOf="@id/tvBookTitle"
+            tools:text="@string/book_authors" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBookPages"
+            style="@style/Book_Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintLeft_toRightOf="@id/imgBook"
+            app:layout_constraintTop_toBottomOf="@id/tvBookAuthor"
+            tools:text="@string/number_pages" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBookEditor"
+            style="@style/Book_Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintLeft_toRightOf="@id/imgBook"
+            app:layout_constraintTop_toBottomOf="@id/tvBookPages"
+            tools:text="@string/book_editor" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBookDate"
+            style="@style/Book_Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintLeft_toRightOf="@id/imgBook"
+            app:layout_constraintTop_toBottomOf="@id/tvBookEditor"
+            tools:text="@string/book_publish" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
